@@ -109,11 +109,11 @@ def validate_instance(params):
         raise RuntimeError(
             System.UNSUPPORTED_SYSTEM_MSG
         )
-    try:
-        urlopen('http://169.254.169.254/latest/meta-data/', timeout=1)
-        raise RuntimeError('Amazon EC2 instances are not supported.')
-    except (URLError, timeout):
-        pass
+    # try:
+        # urlopen('http://169.254.169.254/latest/meta-data/', timeout=1)
+        # raise RuntimeError('Amazon EC2 instances are not supported.')
+    # except (URLError, timeout):
+        # pass
 
 
 def validate_s3_location(params, arg_name):
